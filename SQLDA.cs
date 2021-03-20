@@ -61,7 +61,7 @@ namespace ControlLoopProcessFor3Rates
         {
             using (SqlConnection conn = new SqlConnection(_sqlConnection))
             {
-                using (SqlCommand comm = new SqlCommand("[ASGShiftReport].[dbo].[INSERT_ShiftHandover]") { CommandType = CommandType.StoredProcedure })
+                using (SqlCommand comm = new SqlCommand("[ThreeRates].[dbo].[INSERT_ShiftHandover]") { CommandType = CommandType.StoredProcedure })
                 {
                     comm.Connection = conn;
 

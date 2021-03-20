@@ -15,7 +15,7 @@ namespace ControlLoopProcessFor3Rates
         private static readonly string[] _autModes = { "AUT", "CAS", "AUT IMAN", "RCAS", "AUT TRK", "CAS TRK" }; // these control loop mode values considered as AUT mode (simplified)
         //private readonly string[] _manModes = { "MAN", "MAN IMAN" };
 
-        private const string IHistSrv = "WHBC-DB-IH";
+        private const string IHistSrv = "ihistsrv";
         private const int NumOfSamples = 480; //8h long shifts in plants -> 480 mins, 1 sample every min is enough
         private const int ComparisonValue = 70; //minimum plant load 
 
