@@ -24,8 +24,7 @@ namespace ControlLoopProcessFor3Rates
                 new SqlMetaData("NumOfGoodMANData", SqlDbType.Int),
                 new SqlMetaData("NumOfGoodQltyMANPercentage", SqlDbType.Decimal),
                 new SqlMetaData("NumOfGoodAUTData", SqlDbType.Int),
-                new SqlMetaData("NumOfGoodQltyAUTPercentage", SqlDbType.Int),
-                new SqlMetaData("DateID", SqlDbType.VarChar)
+                new SqlMetaData("NumOfGoodQltyAUTPercentage", SqlDbType.Int)
                 );
 
             foreach (var d in this)

@@ -63,7 +63,10 @@ namespace ControlLoopProcessFor3Rates
                         query.Criteria.FilterComparisonMode = GetHistFilterType(modeTagData.ConditionFilterType); //filtering comparison mode stroed in the database too, depending on the filter tag
                         query.Criteria.FilterComparisonValue = modeTagData.ConditionFilterValue;
 
-                        sc.IData.Query(ref query, out set, out errors);
+                        sc.IData.Query(
+                            ref query, 
+                            out set, 
+                            out errors);
 
                         controlLoopData.Add(ProcessDataSet(set, modeTagData.TagName));
                     }
@@ -119,12 +122,12 @@ namespace ControlLoopProcessFor3Rates
             var controlLoopData = new ControlLoopDataModel
             {
                 HistTagName = currentTag,
-                NumOfGoodData = 480 - bad,
-                NumOfGoodQltyPercentage = bad / 480 * 100,
+                NumOfGoodData = NumOfSamples - bad,
+                NumOfGoodQltyPercentage = bad / NumOfSamples * 100,
                 NumOfGoodAUTData = autCount,
                 NumOfGoodMANData = manCount,
-                NumOfGoodQltyAUTPercentage = autCount / (480 - bad) * 100,
-                NumOfGoodQltyMANPercentage = manCount / (480 - bad) * 100
+                NumOfGoodQltyAUTPercentage = autCount / (NumOfSamples - bad) * 100,
+                NumOfGoodQltyMANPercentage = manCount / (NumOfSamples - bad) * 100
             };
 
             return controlLoopData;
