@@ -3,6 +3,7 @@ It was developed for an internal project called 3Rates @ BorsodChem, which provi
 
 ## Background
 Why is the weird name of this repo?
+
 In BC's 3Rates project I developed applications to calculate KPI's for every plant from Alarms (ISA18.2 - AR), Control Loop (CR) and Interlock (IR) operation modes.
 Some tags in Historian representing control loop operation modes (datatype is string). Full automatic operation is the aim and these KPI values are helping to create a measure.
 
